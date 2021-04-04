@@ -1,7 +1,6 @@
-
-
-var canvas = document.createElement("canvas");
-document.body.appendChild(canvas);
+//var canvas = document.createElement("canvas");
+//document.body.appendChild(canvas);
+var canvas = document.getElementById("canvas");
 var width = 500;
 var height = 500;
 canvas.width = width;
@@ -64,6 +63,8 @@ var alp = function(j){
     return 255;
 };
 
+
+//work in progress function
 var roughDraw = function(){
 
 }

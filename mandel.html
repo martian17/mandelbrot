@@ -1,7 +1,52 @@
-<html>
-<head></head>
+<!DOCTYPE html>
+<html lang="en-US">
+<head><title>default</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
+    <h1>calculating pi using the mandelbrot set</h1>
+    <h2>brief description (↓look below↓)</h2>
+    <p>
+        Inspiration: <a target="_blank" href="https://www.youtube.com/watch?v=d0vY0CKYhPY">Dr. Holly Krieger's video from Numberphile</a><br>
+        This program calculates pi using the fact that the number of iterations that are needed to exit out the mandelbrot condition at 1/4+σ<br>
+        where σ = 1/10^n where n is a positive integer and gets increasingly large<br>
+        <pre id="result"></pre>
+    </p>
+    <div><b>If that bores the heck out of you, don't worry. Here's a mandelbrot explorer you can play with!</b></div><br>
+    <div id="gui-wrapper">
+        <div class="textwrap">
+            <h2>Mandelbrot explorer</h2>
+            <h3>How to use</h3>
+            <ul>
+                <li>Step 1: place your mouse cursor over the area you want to zoom
+                <li>Step 2: type <span class="highlight">&lt;</span> key to zoom out
+                <li>Step 3: type <span class="highlight">&gt;</span> key to zoom in
+            </ul>
+            <div class="textwrap">
+                x (real axis):<br>
+                y (imaginary axis):<br>
+                zoom:<br>
+            </div>
+            <div class="textwrap">
+                <input type="text" id="x"><br>
+                <input type="text" id="y"><br>
+                <input type="text" id="z"><br>
+            </div>
+            <div class="textwrap">
+                <input type="button" id="b" value="Go!">
+            </div>
+        </div>
+        <div class="textwrap">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <a target="_blank" href="https://codepen.io/MartianLord/pen/oNBwxjV">Demo</a><br>
+    <a target="_blank" href="https://github.com/martian17/mandelbrot">Github</a><br>
+    <a target="_blank" id="github" href="https://github.com/martian17/mandelbrot">Fork me on Github</a>
 <script src="mandel.js"></script>
 <script src="control.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

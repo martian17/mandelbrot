@@ -12,6 +12,7 @@ function(e){
     focused = true;
     cancoord[0] = x;
     cancoord[1] = y;
+    updateInputValues();
 });
 
 
@@ -23,6 +24,7 @@ function(e){
         }else if(e.key === "."){//plus
             mandelplus();
         }
+        updateInputValues();
     }
 });
 
@@ -49,6 +51,31 @@ var mandelplus = function(){//zoom in
     coord[1] = i;
     draw(coord,zoom,itr);
 };
+
+
+var xinput = document.getElementById("x");
+var yinput = document.getElementById("y");
+var zoominput = document.getElementById("z");
+var button = document.getElementById("b");
+
+var updateInputValues = function(){
+    xinput.value = coord[0];
+    yinput.value = coord[1];
+    zoominput.value = zoom;
+};
+
+var updateValues = function(){
+    coord[0] = xinput.value;
+    coord[1] = yinput.value;
+    zoom = zoominput.value;
+};
+
+button.addEventListener("click",function(){
+    updateValues();
+    draw(coord,zoom,itr);
+});
+
+updateInputValues();
 
 
 /*
